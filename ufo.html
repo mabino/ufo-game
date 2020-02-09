@@ -11,7 +11,7 @@
 	<div class="stars"></div>
 	<div class="stars"></div>
 		<img id="atom" src="atom.png" style="width: 50px; position: absolute;">
-		<img id="ufo" src="ufo.png" style="width: 100px; position: absolute; top: 150; left: 150; -webkit-transition: all .2s;">
+		<img id="ufo" src="ufo.PNG" style="width: 100px; position: absolute; top: 150; left: 150; -webkit-transition: all .2s;">
 	<div style="margin: 20px;">
 		<h1 style="color:white;">Collect 5 Energy Atoms as quickly as you can!</h1>
 		<h2 id="score" style="color: white;">Energy Atoms: 0</h2>
@@ -22,9 +22,11 @@
 
 /** Initialize variables to hold the score, current game time, the game timer, and the X,Y coordinates of the UFO and atom graphics. **/
 var score = 0, gameTime = 0, gameTimer, ufoX = 0, ufoY = 0, atomX = 0, atomY = 0;
-
-
+0
+/** Tell the computer to listen for a key press and call handleKeys. **/
 document.addEventListener('keydown', handleKeys);
+
+/** Call the startUp function when the document loads. **/
 document.onload = startUp();
 
 function setLeft(id, x){
@@ -91,7 +93,7 @@ function checkIfHitAtom(){
 
 function gameOver(){
 	clearInterval(gameTimer);
-	alert(`Well done! Your time was: ${gameTime}`);
+	alert(`Well done! Your time was: ${gameTime} seconds.`);
 	location.reload();
 }
 
